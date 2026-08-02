@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiMAGEL</title>
+
+    <link rel="stylesheet" href="testcss1.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="dimagellogo.png" alt="Logo">
+
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Website -->
+    <header id="navbar">
+    <div class="nav-left">
+        <img src="dimagellogo.png" alt="Logo" class="nav-logo">
+    </div>
+
+    <nav>
+        <button> <img src="home.png" alt="-"> Beranda </button>
+        <button onclick="window.location.href='pencarian.html'"> <img src="search.png" alt="-" > Pencarian </button>
+        <div class="akun">
+    <button id="akunButton">
+        <img src="account.png" alt="-"> Akun
+    </button>
+
+    <div class="akun-dropdown">
+        <button>Masuk</button>
+        <button id="signupMenuButton">Daftar</button>
+    </div>
+</div>
+        <button> <img src="settings.png" alt="-"> Pengaturan </button>
+    </nav>
+</header>
+
+<div class="signup-popup" id="signupPopup">
+
+    <div class="signup-box">
+
+        <span class="close-popup">&times;</span>
+
+        <h1>Buat Akun</h1>
+
+        <input type="text" placeholder="Nama Pengguna">
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Kata Sandi">
+
+        <button class="signup-button">Daftar</button>
+
+    </div>
+
+</div>
+
+    <script src="jstest1.js"></script>
+
+<section class="hero">
+    <img src="hero.png" alt="Hero Image">
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <img src="aboutus.png" alt="Tentang Kami">
+
+        <h2>Tentang Kami</h2>
+
+        <p>
+            Pelajari lebih lanjut tentang misi, visi, dan layanan kami.
+        </p>
+
+        <button>Pelajari lebih lanjut</button>
+    </div>
+
+    <div class="card">
+        <img src="customersupport.png" alt="Layanan Pelanggan">
+
+        <h2>Layanan Pelanggan</h2>
+
+        <p>
+            Butuh Bantuan? Hubungi tim dukung kami kapan saja.
+        </p>
+
+        <button>Hubungi Kami</button>
+    </div>
+
+</section>
+
+</body>
+</html>

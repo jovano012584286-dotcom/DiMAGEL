@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pencarian</title>
+
+    <link rel="stylesheet" href="testcss1.css">
+</head>
+<body>
+<header id="navbar">
+    <img src="dimagellogo.png" class="nav-logo" alt="Logo">
+
+    <nav>
+        <button onclick="
+    sessionStorage.setItem('skipLoader', 'true');
+    window.location.href='index.html';
+">
+    <img src="home.png" alt="-">
+    Beranda
+</button>
+
+        <button onclick="window.location.href='pencarian.html'">
+            <img src="search.png" alt="-">
+            Pencarian
+        </button>
+
+        <div class="akun">
+            <button id="akunButton">
+                <img src="account.png" alt="-">
+                Akun
+            </button>
+
+            <div class="akun-dropdown">
+                <button>Masuk</button>
+                <button id="signupMenuButton">Daftar</button>
+            </div>
+        </div>
+
+        <button>
+            <img src="settings.png" alt="-">
+            Pengaturan
+        </button>
+    </nav>
+</header>
+
+<div class="signup-popup" id="signupPopup">
+
+    <div class="signup-box">
+
+        <span class="close-popup">&times;</span>
+
+        <h1>Buat Akun</h1>
+
+        <input type="text" placeholder="Nama Pengguna">
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Kata Sandi">
+
+        <button class="signup-button">Daftar</button>
+
+    </div>
+
+</div>
+
+<section class="listing-page">
+
+    <div class="listing-image">
+
+        <img src="siti.png" alt="Siti - Drone Penyemprot Pertanian">
+
+    </div>
+
+    <div class="listing-info">
+
+        <h1 id="listingTitle">Siti — Drone Penyemprot Pertanian</h1>
+
+        <p class="listing-description">
+            Drone EAvision J70 untuk penyemprotan pupuk dan pestisida secara efisien, cocok untuk lahan pertanian berskala kecil hingga besar.
+        </p>
+
+        <div class="listing-location">
+
+            <h3>Lokasi</h3>
+
+            <p>📍 Yogyakarta, DI Yogyakarta</p>
+
+        </div>
+
+        <div class="listing-distance">
+
+            <h3>Informasi Jarak</h3>
+
+            <div class="distance-row">
+
+                <span>Jarak Anda</span>
+
+                <span class="loading-text">
+                    <span class="spinner"></span>
+                    Menghitung...
+                </span>
+
+            </div>
+
+            <div class="distance-row">
+
+                <span>Radius Penyewaan</span>
+
+                <span>120 km</span>
+
+            </div>
+
+            <div class="distance-row">
+
+                <span>Status</span>
+
+                <span class="loading-text">
+                    <span class="spinner"></span>
+                    Menentukan...
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="listing-review">
+
+            ★★★★★
+            <span>(47 Ulasan)</span>
+
+        </div>
+
+        <div class="listing-price" id="listingPrice">
+
+            Rp 1.200.000,00<span>/hari</span>
+
+        </div>
+
+        <div class="listing-details">
+
+            <div class="detail-row">
+
+                <span>Stok</span>
+
+                <strong id="stockLimit">8 Unit</strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>Maksimum Penyewaan</span>
+
+                <strong id="dayLimit">14 Hari</strong>
+
+            </div>
+			
+			<div class="detail-row">
+
+               <span>Pemberitahuan Minimum</span>
+
+               <strong id="noticeLimit">1 Hari</strong>
+			 
+			</div>
+
+        </div>
+
+        <div class="quantity-section">
+
+            <label>Jumlah Unit</label>
+
+            <div class="quantity-box">
+
+                <button id="unitMinus">-</button>
+
+                <span id="unitValue">1</span>
+
+                <button id="unitPlus">+</button>
+
+            </div>
+
+        </div>
+
+        <div class="quantity-section">
+
+            <label>Lama Penyewaan</label>
+
+            <div class="quantity-box">
+
+                <button id="dayMinus">-</button>
+
+                <span id="dayValue">1 Hari</span>
+
+                <button id="dayPlus">+</button>
+
+            </div>
+
+        </div>
+
+        <button class="watchlist-button">
+
+            Masukkan Watchlist
+
+        </button>
+
+        <button class="confirm-button" id="openCheckout">
+		
+            Ajukan Penyewaan
+			
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================
+     CHECKOUT POPUP
+====================== -->
+
+<div class="checkout-popup" id="checkoutPopup">
+
+    <div class="checkout-box">
+
+        <span class="close-checkout" id="closeCheckout">&times;</span>
+
+        <h2>Ajukan Penyewaan</h2>
+
+        <div class="checkout-summary">
+
+            <h3>Ringkasan Penyewaan</h3>
+
+            <div class="summary-row">
+                <span>Peralatan</span>
+                <strong id="checkoutTitle"></strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Harga per Hari</span>
+                <strong id="checkoutPrice"></strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Jumlah Unit</span>
+                <strong id="checkoutUnits"></strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Lama Penyewaan</span>
+                <strong id="checkoutDays"></strong>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Estimasi Total</span>
+                <strong id="checkoutTotal"></strong>
+            </div>
+
+        </div>
+
+        <div class="checkout-calendar">
+
+            <h3>Pilih Tanggal Mulai Penyewaan</h3>
+
+            <div id="calendarContainer"></div>
+
+            <p class="calendar-info">
+                Pilih tanggal mulai. Lama penyewaan akan mengikuti pilihan Anda.
+            </p>
+
+            <p class="calendar-warning" id="calendarWarning"></p>
+
+            <div class="selected-dates">
+
+                <div class="summary-row">
+                    <span>Tanggal Mulai</span>
+                    <strong id="selectedStart">-</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tanggal Berakhir</span>
+                    <strong id="selectedEnd">-</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="checkout-terms">
+
+            <p>
+
+                Dengan menekan
+                <strong>"Ajukan Penyewaan"</strong>,
+                Anda menyetujui
+                <a href="#">Syarat dan Ketentuan Penyewaan.</a>
+
+            </p>
+
+        </div>
+
+        <div class="checkout-buttons">
+
+            <button class="cancel-checkout" id="cancelCheckout">
+
+                Batal
+
+            </button>
+
+            <button class="confirm-checkout" id="confirmCheckout">
+
+                Ajukan Penyewaan
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="listingjava1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pencarian</title>
+
+    <link rel="stylesheet" href="testcss1.css">
+</head>
+<body>
+<header id="navbar">
+    <img src="dimagellogo.png" class="nav-logo" alt="Logo">
+
+    <nav>
+        <button onclick="
+    sessionStorage.setItem('skipLoader', 'true');
+    window.location.href='index.html';
+">
+    <img src="home.png" alt="-">
+    Beranda
+</button>
+
+        <button onclick="window.location.href='pencarian.html'">
+            <img src="search.png" alt="-">
+            Pencarian
+        </button>
+
+        <div class="akun">
+            <button id="akunButton">
+                <img src="account.png" alt="-">
+                Akun
+            </button>
+
+            <div class="akun-dropdown">
+                <button>Masuk</button>
+                <button id="signupMenuButton">Daftar</button>
+            </div>
+        </div>
+
+        <button>
+            <img src="settings.png" alt="-">
+            Pengaturan
+        </button>
+    </nav>
+</header>
+
+<div class="signup-popup" id="signupPopup">
+
+    <div class="signup-box">
+
+        <span class="close-popup">&times;</span>
+
+        <h1>Buat Akun</h1>
+
+        <input type="text" placeholder="Nama Pengguna">
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Kata Sandi">
+
+        <button class="signup-button">Daftar</button>
+
+    </div>
+
+</div>
+
+<div class="search-page">
+
+<section class="filter-panel">
+
+    <h2>Filter</h2>
+
+    <div class="filter-category">
+
+        <h3>Peralatan</h3>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Traktor Tangan">
+            Traktor Tangan
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Pompa Air Portabel">
+            Pompa Air Portabel
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Mesin Perontok Padi/Jagung">
+            Mesin Perontok Padi/Jagung
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Mesin Panen Padi">
+            Mesin Panen Padi
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Rotavator/Cultivator">
+            Rotavator/Cultivator
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Semprotan Hama Bermotor">
+            Semprotan Hama Bermotor
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Traktor Roda Empat Kompak">
+            Traktor Roda Empat Kompak
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Peralatan-Lain-Lainnya">
+            Lain-Lainnya
+        </label>
+
+    </div>
+
+    <div class="filter-category">
+
+        <h3>Sewa</h3>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Sewa-Sewa Kering">
+            Sewa Kering
+        </label>
+
+        <label>
+            <input type="checkbox" class="filter-checkbox" value="Sewa-Sewa Basah">
+            Sewa Basah
+        </label>
+
+    </div>
+
+</section>
+	
+	<section class="results">
+
+           <h2 class="results-heading">Hasil Pencarian</h2>
+		   
+		     <div class="results-cards">
+
+        <div class="result-card" data-peralatan="Peralatan-Traktor Tangan"
+     data-sewa="Sewa-Sewa Kering" onclick="window.location.href='budi.html'">
+            <img src="budi.png" alt="">
+            <h3>Budi — Traktor Tangan</h3>
+            <p> Trakor Tangan Elektrik MT-20, cocok untuk lahan kecil hingga sedang.</p>
+			<h4>Rp 250.000,00/hari</h4>
+			<div class="card-rating">
+
+            ★★★★☆ 4,4
+            <span>(32)</span>
+
+            </div>
+			<h5>Sewa Kering</h5>
+			
+        </div>
+
+        <div class="result-card" data-peralatan="Peralatan-Traktor Tangan"
+     data-sewa="Sewa-Sewa Kering" onclick="window.location.href='asep.html'">
+            <img src="asep.png" alt="">
+            <h3>Asep — Traktor Tangan</h3>
+            <p>Traktor Tangan Kubota 14hp, terawat dan siap digunakan untuk berbagai jenis lahan.</p>
+			<h4>Rp 350.000,00/hari</h4>
+			<div class="card-rating">
+
+            ★★★★☆ 4,2
+            <span>(24)</span>
+
+            </div>
+			<h5>Sewa Kering</h5>
+			<h5></h5>
+        </div>
+
+        <div class="result-card" data-peralatan="Peralatan-Traktor Roda Empat Kompak"
+     data-sewa="Sewa-Sewa Kering" onclick="window.location.href='tono.html'">
+            <img src="tono.png" alt="">
+            <h3>Tono — Traktor Roda Empat Kompak</h3>
+            <p>Traktor kompak 4x4 dengan loader depan dan backhoe, ideal untuk pekerjaan pertanian dan konstruksi ringan.</p>
+			<h4>Rp 1.750.000,00/hari</h4>
+			 <div class="card-rating">
+
+            ★★★★★ 4,9
+            <span>(18)</span>
+
+            </div>
+			<h5>Sewa Kering</h5>
+			<h5></h5>
+        </div>
+
+        <div class="result-card" data-peralatan="Peralatan-Lain-Lainnya"
+     data-sewa="Sewa-Sewa Kering" onclick="window.location.href='siti.html'">
+            <img src="siti.png" alt="">
+            <h3>Siti — Drone Penyemprot Pertanian</h3>
+            <p>Drone EAvision J70 untuk penyemprotan pupuk dan pestisida secara efisien.</p>
+			<h4>Rp 1.200.000,00/hari</h4>
+			 <div class="card-rating">
+
+            ★★★★★ 4,8
+            <span>(47)</span>
+
+            </div>
+			<h5>Sewa Kering</h5>
+			<h5></h5>
+        </div>
+
+    </div>
+
+
+    </section>
+
+</div>
+
+<script src="jstest2.js"></script>
+
+</body>
+</html>
