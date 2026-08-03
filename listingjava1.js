@@ -247,7 +247,13 @@ const selectedEnd = document.getElementById("selectedEnd");
 const noticeLimit =
     parseInt(document.getElementById("noticeLimit").textContent);
 
-let currentDate = new Date();
+const now = new Date();
+
+let currentDate = new Date(
+    now.toLocaleString("en-US", {
+        timeZone: "Asia/Jakarta"
+    })
+);
 
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
