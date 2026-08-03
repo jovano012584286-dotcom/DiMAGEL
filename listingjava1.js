@@ -301,8 +301,6 @@ currentDate = new Date(
     })
 );
 
-	currentMonth = currentDate.getMonth();
-    currentYear = currentDate.getFullYear();
 
     calendarContainer.innerHTML = "";
 
