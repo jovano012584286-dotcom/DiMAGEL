@@ -259,6 +259,7 @@ let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
 
 let selectedStartDate = null;
+let selectedEndDate = null;
 
 let bookingData = {
     start: null,
