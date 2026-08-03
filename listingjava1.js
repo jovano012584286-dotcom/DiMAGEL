@@ -188,11 +188,26 @@ openCheckout.addEventListener("click", () => {
     checkoutTotal.textContent =
         "Rp " + total.toLocaleString("id-ID") + ",00";
 
-    // Show popup
-    renderCalendar();
-    resetCalendarSelection();
+   // Refresh Jakarta date
+const now = new Date();
 
-    checkoutPopup.style.display = "flex";
+currentDate = new Date(
+    now.toLocaleString("en-US", {
+        timeZone: "Asia/Jakarta"
+    })
+);
+
+currentMonth = currentDate.getMonth();
+currentYear = currentDate.getFullYear();
+
+// Clear previous selection
+resetCalendarSelection();
+
+// Draw calendar
+renderCalendar();
+
+// Show popup
+checkoutPopup.style.display = "flex";
 });
 
 // Close with X
