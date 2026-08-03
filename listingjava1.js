@@ -351,7 +351,7 @@ function renderCalendar(){
 
     }
 
-    const earliestDate = new Date();
+   const earliestDate = new Date(currentDate);
 
     earliestDate.setHours(0,0,0,0);
 
