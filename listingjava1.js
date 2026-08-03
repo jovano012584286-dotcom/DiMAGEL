@@ -247,13 +247,7 @@ const selectedEnd = document.getElementById("selectedEnd");
 const noticeLimit =
     parseInt(document.getElementById("noticeLimit").textContent);
 
-const now = new Date();
-
-let currentDate = new Date(
-    now.toLocaleString("en-US", {
-        timeZone: "Asia/Jakarta"
-    })
-);
+let currentDate;
 
 let currentMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
@@ -291,6 +285,14 @@ const weekdayNames = [
 ];
 
 function renderCalendar(){
+
+	const now = new Date();
+
+currentDate = new Date(
+    now.toLocaleString("en-US", {
+        timeZone: "Asia/Jakarta"
+    })
+);
 
     calendarContainer.innerHTML = "";
 
