@@ -189,10 +189,10 @@ openCheckout.addEventListener("click", () => {
         "Rp " + total.toLocaleString("id-ID") + ",00";
 
     // Show popup
-    checkoutPopup.style.display = "flex";
-
-    resetCalendarSelection();
     renderCalendar();
+    resetCalendarSelection();
+
+    checkoutPopup.style.display = "flex";
 });
 
 // Close with X
